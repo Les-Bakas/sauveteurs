@@ -83,7 +83,11 @@ async function parseEach() {
 (async () => {
     await parse('https://sauveteurdudunkerquois.fr/tableau-d-honneur/');
     await parseEach();
-    writeFileSync(`${__dirname}/../datas/marins.json`, JSON.stringify(arr));
+    const marinObjects: {[key: number]: marin} = {};
+    for (let i = 0; i < arr.length; i ++) {
+        marinObjects[i] = arr[i];
+    }
+    writeFileSync(`${__dirname}/../datas/marins.json`, JSON.stringify(marinObjects));
 })();
 
 
