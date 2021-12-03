@@ -1,0 +1,76 @@
+body {
+    color: white;
+    margin: 0;
+    height: 100%;
+    background-color: #02040a;
+    width: 100%;
+}
+
+main {
+    margin: auto;
+    width: 50%;
+    height: 650px;
+    overflow: hidden;
+    background-color: #02040a;
+}
+
+.table--wrapper {
+    margin-top: 20px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+header {
+    height: 20px;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+:focus {
+    outline: none;
+}
+
+.search--button {
+    cursor: pointer;
+}
+
+.add--button {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #21262d;
+    border-radius: 50%;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.flex--row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex--column {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchbar {
+    background-color: #0d1116;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #161b22;
+}
+
+.searchbar > input {
+    font-size: 20px;
+    color: white;
+    background-color: #0d1116;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+

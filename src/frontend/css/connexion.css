@@ -1,0 +1,14 @@
+#icon{
+	color: var(--font-icon);
+}
+
+#condition{
+	color: var(--font-name);
+}
+
+.btn{
+	width: 25%;
+	margin-top: -5px;
+}
+
+

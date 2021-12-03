@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/searchbar.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/style-ajout.css">
+    <script type="text/javascript" src="../js/ajout.js" defer></script>
+    <script src="https://kit.fontawesome.com/e980dc43fa.js" crossorigin="anonymous"></script>
+    <title>Search engine</title>
+</head>
+
+<body>
+    <header class="website--header flex--row">
+        <div class="header--logo">
+            <img class="icon--logo" alt="logo" src="../img/logo.png">
+        </div>
+        <nav class="nav--wrapper flex--row">
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/">Lifeguards</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/sorties-en-mer/">Sea trips</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/les-stations/">Stations</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/services-du-port/">Port services</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/moyens-maritimes/">Maritime assets</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/materiels/">Techniques</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/historique/">History</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/complements/">Complements</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://sauveteurdudunkerquois.fr/estaminet-2/">Estaminet</a>
+            </div>
+            <div class="nav--title">
+                <a href="/MoteurDeRechercheEN">Search engine</a>
+            </div>
+            <div class="nav--title">
+                <a href="https://testnets.opensea.io/collection/cryptosauveteurs">Support us!</a>
+            </div>
+            <div class="nav--title connexion">
+                <a href="/connexionEN">Log in</a>
+            </div>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+        </nav>
+        <div class="drapeau">
+       <a href="MoteurDeRechercheFR"> <img id="drapo" src="../img/fr.png"></a>
+    </div>
+    <div class="social">
+        <div>
+            <a class="reseau" href="https://twitter.com/boutelierphili1"><i id="twitter" class="fab fa-twitter"></i></a>
+        </div>
+        <div>
+            <a class="reseau" href="https://www.facebook.com/groups/938396409644949"><i id="facebook" class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="website--searchbar">
+            <input class="researchbar" placeholder="Search" type="text" id="research" name="research" required>
+        </div>
+        <div id="search--button">Chercher</div>
+        <div class="flex--column">
+            <div>
+                <div class="intern--border flex--row">
+                    <div>
+                        <img class="user--picture" src="../img/user.jpeg">
+                    </div>
+                    <div class="infos--border">
+                        <div class="infos--name text">
+                            SURNAME-NAME
+                        </div>
+                        <div class="infos--desc text">
+                            Description
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="afficher()"> ADDITION</button>
+        <div id="ajout">
+            <div id="fermer"><img id="croix" src="../img/croix.png">
+            </div>
+            <div class="espace">
+
+                <div id="ajout-img">
+                     
+
+                    <div id="boiteImg"><img id="beuteu" src="#" alt="votre photo"></div>
+                    <div><input type="file" id="fileImg" accept="image/*" name="image"></div>
+
+                </div>
+                <form>
+                    <p id="texte">Adding a lifeguard or a rescued person?</p> <select>
+                        <option>Lifeguard</option>
+                        <option>Person rescued</option>
+                    </select>
+                     <p id="texte">SURNAME - FIRST NAME</p> <input type="text" name="nom" placeholder="NAME-SURNAME">
+                     <p id="texte" class="haut">
+                        <input type="checkbox" name="inconnu">
+                        By checking this box you accept our general conditions of use</p>
+                    <input type="submit" name="envoie">
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+<script>
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+        }
+    }
+
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+</script>
+
+
+</html>

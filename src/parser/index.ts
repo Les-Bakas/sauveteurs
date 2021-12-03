@@ -6,6 +6,7 @@ import { writeFileSync } from 'fs';
 interface marin {
     nom: string;
     url: string;
+    verify: boolean;
     id?: number;
     desc?: string;
     img?: string;
@@ -54,6 +55,7 @@ async function parse(url: string) {
             if (!seen.includes(nom) && url && url.includes('https') && url.split('-')[1] && url.split('-')[1].split('/')[0].length === 5) {
                 seen.push(nom);
                 arr.push({
+                    verify: true,
                     nom:  nom || '',
                     url:  url || ''
                 });

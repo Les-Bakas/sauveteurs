@@ -1,0 +1,41 @@
+.marin--card {
+    position: relative;
+    padding: 10px;
+    width: calc(100% - 24px);
+    background-color: #0d1116;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #161b22;
+    margin-top: 10px;
+}
+
+.marin--img {
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.marin--infos {
+    margin-left: 20px;
+}
+
+.marin--nom {
+    font-size: 30px;
+}
+
+.marin--modify {
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    padding: 5px 10px;
+    top: 10px;
+    border-radius: 2px;
+    right: 10px;
+    background-color: #2181e2;
+    animation: ease-in-out;
+    animation-duration: 0.4s;
+}
+
+.marin--modify:hover {
+    filter: brightness(120%);
+}
