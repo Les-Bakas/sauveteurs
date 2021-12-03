@@ -1,44 +1,14 @@
-async function search() {
-    document.getElementById('search--table').innerHTML = '';
-    const response = await fetch(`http://localhost:3000/search`, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/x-www-form-urlencoded'
-        },
-        body: `nom=${document.getElementById('research').value}`,
-        referrerPolicy: "strict-origin-when-cross-origin",
-        credentials: "include",
-        mode: "cors",
-        redirect: 'follow',
-    });
-    const array = JSON.parse(await response.text());
-    array.forEach(result => {
-        const tr = document.createElement('div');
-        tr.innerHTML = `<div class="intern--border flex--row">
-        <div>
-            <img class="user--picture" src="${result.img}">
-        </div>
-        <div class="infos--border">
-            <div class="infos--name text">
-                ${result.nom}
-            </div>
-            <div class="infos--desc text">
-                ${result.desc}
-            </div>
-        </div>
-    </div>`
-    document.getElementById('search--table').appendChild(tr);
-  //  document.getElementById('search--table').appendChild(tr);
-    });
-}
+//Mauvais code
+//execute un call api to localhost/search avec en body: nom et pour valeur l'input de recherche
 
-document.getElementById('search--button').onlick = search;
+function _0x1af7(_0xeae652,_0x13beeb){const _0x639b87=_0x2f4c();return _0x1af7=function(_0x2075d5,_0x221dfc){_0x2075d5=_0x2075d5-(0xf6f+0x105d+0x7d5*-0x4);let _0x208d06=_0x639b87[_0x2075d5];return _0x208d06;},_0x1af7(_0xeae652,_0x13beeb);}const _0x78497a=_0x1af7;(function(_0x58f572,_0x12ca76){const _0x41271c=_0x1af7,_0x1157bb=_0x58f572();while(!![]){try{const _0x1d992d=-parseInt(_0x41271c(0x79))/(-0x11*-0x133+0x1943+-0x7b*0x5f)+-parseInt(_0x41271c(0xc4))/(-0x15*-0x136+0xaa3+-0x240f)+parseInt(_0x41271c(0xbe))/(0x5d*0x4d+-0x1*-0x1a87+-0x367d)*(-parseInt(_0x41271c(0x9c))/(0x1227+-0x1441+0x21e))+parseInt(_0x41271c(0x94))/(-0x2081+-0xede+0x2f64)*(-parseInt(_0x41271c(0x8a))/(0x801+-0x9b+0x10*-0x76))+-parseInt(_0x41271c(0xb0))/(0x3e*-0x6a+-0x1*0x24d9+0x3e8c)*(-parseInt(_0x41271c(0x98))/(0x1e41+-0x9a5+-0x1494))+-parseInt(_0x41271c(0xc0))/(0x4c6*-0x1+-0x1d32+0x2201)*(-parseInt(_0x41271c(0xcb))/(0x1*0x5b5+-0x1*-0x1705+-0x66*0x48))+-parseInt(_0x41271c(0xb6))/(-0xb*0x12f+0x14f4+-0xca*0xa)*(-parseInt(_0x41271c(0xbc))/(0x161f+0x2*0xb45+-0x2c9d));if(_0x1d992d===_0x12ca76)break;else _0x1157bb['push'](_0x1157bb['shift']());}catch(_0x383825){_0x1157bb['push'](_0x1157bb['shift']());}}}(_0x2f4c,0x41157*0x1+0x13d73+-0x33421));async function search(){const _0x57cda9=_0x1af7,_0x581ae8={'iOfWo':_0x57cda9(0xa9),'FxlTU':_0x57cda9(0x9e)+_0x57cda9(0xbb),'FhlRh':function(_0x29f2fa,_0x2f3c6e,_0xfc3663){return _0x29f2fa(_0x2f3c6e,_0xfc3663);},'rPyRF':_0x57cda9(0xad),'STSoK':_0x57cda9(0x99)+_0x57cda9(0xaa)+_0x57cda9(0x95)+_0x57cda9(0xc6),'zLVUa':_0x57cda9(0x8b),'zPVVu':_0x57cda9(0xa4)+_0x57cda9(0xc9)+_0x57cda9(0xac)+'n','dDJFo':_0x57cda9(0x7e),'jvsgm':_0x57cda9(0xc8),'lGAZB':_0x57cda9(0x89)};document[_0x57cda9(0xca)+_0x57cda9(0x8c)](_0x581ae8[_0x57cda9(0x9d)])[_0x57cda9(0xbf)]='';const _0x564bb0=await _0x581ae8[_0x57cda9(0xb4)](fetch,_0x57cda9(0xa5)+_0x57cda9(0xc7)+_0x57cda9(0xb9),{'method':_0x581ae8[_0x57cda9(0x7b)],'headers':{'content-type':_0x581ae8[_0x57cda9(0xa7)]},'body':_0x57cda9(0x84)+document[_0x57cda9(0xca)+_0x57cda9(0x8c)](_0x581ae8[_0x57cda9(0xcd)])[_0x57cda9(0x87)],'referrerPolicy':_0x581ae8[_0x57cda9(0xcc)],'credentials':_0x581ae8[_0x57cda9(0xaf)],'mode':_0x581ae8[_0x57cda9(0xa0)],'redirect':_0x581ae8[_0x57cda9(0xa6)]}),_0x1a3a5d=JSON[_0x57cda9(0xa1)](await _0x564bb0[_0x57cda9(0x7d)]());_0x1a3a5d[_0x57cda9(0x9b)](_0x3c2b5c=>{const _0x19bbfc=_0x57cda9,_0x43e9c9=document[_0x19bbfc(0x91)+_0x19bbfc(0xc1)](_0x581ae8[_0x19bbfc(0xb5)]);_0x43e9c9[_0x19bbfc(0xbf)]=_0x19bbfc(0x81)+_0x19bbfc(0xb3)+_0x19bbfc(0xc5)+_0x19bbfc(0x85)+_0x19bbfc(0x8e)+_0x19bbfc(0xa8)+_0x19bbfc(0x8f)+_0x19bbfc(0x96)+_0x19bbfc(0xc2)+_0x19bbfc(0x78)+_0x3c2b5c[_0x19bbfc(0xae)]+(_0x19bbfc(0xbd)+_0x19bbfc(0x93)+_0x19bbfc(0x90)+_0x19bbfc(0x82)+_0x19bbfc(0x8d)+_0x19bbfc(0xb8)+_0x19bbfc(0x90)+_0x19bbfc(0x82)+_0x19bbfc(0x88)+_0x19bbfc(0xba)+_0x19bbfc(0xb7)+_0x19bbfc(0xa3))+_0x3c2b5c[_0x19bbfc(0x83)]+(_0x19bbfc(0x7f)+_0x19bbfc(0xb1)+_0x19bbfc(0xb7)+_0x19bbfc(0xab)+_0x19bbfc(0x80)+_0x19bbfc(0xc3)+_0x19bbfc(0xbd)+_0x19bbfc(0xa2))+_0x3c2b5c[_0x19bbfc(0x7c)]+(_0x19bbfc(0x7f)+_0x19bbfc(0xb1)+_0x19bbfc(0x9f)+_0x19bbfc(0x9a)+_0x19bbfc(0x92)),document[_0x19bbfc(0xca)+_0x19bbfc(0x8c)](_0x581ae8[_0x19bbfc(0x9d)])[_0x19bbfc(0x97)+'d'](_0x43e9c9);});}document[_0x78497a(0xca)+_0x78497a(0x8c)](_0x78497a(0x7a)+_0x78497a(0x86))[_0x78497a(0xb2)]=search;function _0x2f4c(){const _0x2732e3=['\x20\x20\x20\x20\x20\x20\x20\x20</','jvsgm','parse','\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x20\x20\x20','strict-ori','http://loc','lGAZB','STSoK','v>\x0a\x20\x20\x20\x20\x20\x20\x20','div','n/x-www-fo','\x20\x20<div\x20cla','ross-origi','POST','img','dDJFo','23597uZmtIW','\x20\x20\x20</div>\x0a','onlick','=\x22intern--','FhlRh','iOfWo','132XLXMkx','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','r\x22>\x0a\x20\x20\x20\x20\x20\x20','search','text\x22>\x0a\x20\x20\x20','ble','311016bqdtER','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20','188373mtYbmv','innerHTML','65673PVqQAH','ent','r--picture','-desc\x20text','157920MFkvrp','border\x20fle','ded','alhost:80/','cors','gin-when-c','getElement','190ZWybtl','zPVVu','zLVUa','\x22\x20src=\x22','46884egRGFr','search--bu','rPyRF','desc','text','include','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20','ss=\x22infos-','<div\x20class','\x20class=\x22in','nom','nom=','x--row\x22>\x0a\x20','tton','value','fos--name\x20','follow','13086ufroyW','research','ById','fos--borde','\x20\x20\x20\x20\x20\x20\x20<di','\x20\x20\x20\x20\x20<img\x20','\x20\x20\x20\x20\x20\x20<div','createElem','/div>','\x20</div>\x0a\x20\x20','290odwAtU','rm-urlenco','class=\x22use','appendChil','8jKhxoX','applicatio','div>\x0a\x20\x20\x20\x20<','forEach','4HZWkSc','FxlTU','search--ta'];_0x2f4c=function(){return _0x2732e3;};return _0x2f4c();}
+
 
 const formLogin = document.getElementById('login');
 
 
 async function login() {
-    const response = await fetch(`http://localhost:3000/login`, {
+    const response = await fetch(`http://localhost:80/login`, {
         method: 'POST',
         headers: {
             'content-type': 'application/x-www-form-urlencoded'
@@ -50,6 +20,6 @@ async function login() {
         redirect: 'follow',
     });
 }
-//FONCTION CREE RAJOUTE UN ELEMENT DANS LA TABLE
-//FONCTION ENVOIE LE LOGIN
+//FONCTION CREE RAJOUTE UN ELEMENT DANS LA TABLE : tkt jla jfait 
+//FONCTION ENVOIE LE LOGIN : tkt jlai fait aussi chui le boss
 //FONCTION ENVOIE
