@@ -96,6 +96,10 @@ class Server {
         });
 
         //ROUTER
+        this.app.get('/', (req, res) => {
+            res.status(200).sendFile(`${__dirname}/frontend/html/index.html`);
+        })
+
         this.app.get('/:page', (req, res) => {
             res.status(200).sendFile(`${__dirname}/frontend/html/${req.params.page}.html`);
         });
